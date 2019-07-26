@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tours</title>
+    <script
+    src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css"> 
+</head>
+<body>
+    <header>
+        <h1 id="majHeading">Holiday Packages</h1>
+    </header>
+    <section>
+        <table class="redBorder">
+            <caption>Weekend Packages</caption>
+            <thead>
+                <tr class="redBorder">
+                    <th>SR No.</th>
+                    <th>Package Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody class="redBorder">
+                <tr>
+                    <td>1</td>
+                    <td>Pondy</td>
+                    <td>4500</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mahabalipuram</td>
+                    <td>6200</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ooty</td>
+                    <td>7900</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        <button id="addButton" >Add Row</button>
+    </section>
+    <section>
+        <h2>Holiday Destinations</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6"><img src="images/chennai.jpeg" alt="Chennai" class="logo blueBorder">
+                    <p>Chennai, on the Bay of Bengal in eastern India, is the capital of the state of Tamil Nadu. The city is home to Fort St. George, built in 1644 and now a museum showcasing the city’s roots as a British military garrison and East India Company trading outpost, when it was called Madras. Religious sites include Kapaleeshwarar Temple, adorned with carved and painted gods, and St. Mary’s, a 17th-century Anglican church.</p></div>
+                <div class="col-sm-6"><img src="images/falls.jpg" alt="Tada Falls" class="logo blueBorder">
+                    <p>Ubbalamudugu Falls is a waterfall located near Oneness Temple and Sricity in the Chittoor district of India. It's a crystal clear waterfalls falling from a height of 100-odd meters making it a glorious sight.</p></div>  
+                <div class="col-sm-6"><img src="images/mahab.jpg" alt="Mahabalipuram" class="logo blueBorder">
+                    <p>Mamallapuram, or Mahabalipuram, is a town on a strip of land between the Bay of Bengal and the Great Salt Lake, in the south Indian state of Tamil Nadu. It’s known for its temples and monuments built by the Pallava dynasty in the 7th and 8th centuries. The seafront Shore Temple comprises 3 ornate granite shrines. Krishna’s Butter Ball is a massive boulder balanced on a small hill near the Ganesha Ratha stone temple.</p></div>
+                <div class="col-sm-6"><img src="images/pondy.jpg" alt="Pondicherry" class="logo blueBorder">
+                    <p>Pondicherry (or Puducherry), a French colonial settlement in India until 1954, is now a Union Territory town bounded by the southeastern Tamil Nadu state. Its French legacy is preserved in its French Quarter, with tree-lined streets, mustard-colored colonial villas and chic boutiques. A seaside promenade runs along the Bay of Bengal and passes several statues, including a 4m-high Gandhi Memorial.</p></div>  
+                    </div>
+                    </div>
+                
+    </section>
+    <footer></footer>
+    <!-- <script>
+            var addButton=document.getElementById("addButton")
+            addButton.addEventListener('click',function(){
+                console.log('click Event fired');
+            });
+       </script>    -->
+       <script>
+       $(function(){
+           $("#addButton").on('click',function()
+           {
+               console.log('click Event fired');
+               var newRow="<tr><td>4</td><td>Kodai</td><td>6700</td>"
+               $("table").append(newRow);
+           })
+       });
+       </script>
+</body>
+</html>
